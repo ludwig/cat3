@@ -14,7 +14,7 @@ A similar script for scraping those catlinks (skipping hidden categories this ti
 
     ./scrape-page-catlinks.py https://en.wikipedia.org/wiki/Heart
 
-Samme, but using the Wikipedia API instead of scraping,
+Same, but using the Wikipedia API instead of scraping,
 
     ./get-page-categories.py https://en.wikipedia.org/wiki/Heart
 
