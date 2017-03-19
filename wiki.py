@@ -13,6 +13,7 @@ import json
 import requests
 
 WIKI_API = 'https://en.wikipedia.org/w/api.php'
+#WIKI_API = 'http://www.ganfyd.org/api.php'
 
 # -----------------------------------------------------------------------------
 # Lower level functions
@@ -75,7 +76,9 @@ def get_page_categories(title):
         pages = r['query']['pages']
         for (page_id, page) in pages.items():
             for c in page.get('categories', []):
-                cat = c['title'][len('Category:'):]
+                cat = c['title']
+                if cat.startswith('Category:'):
+                    cat = cat[len('Category:'):]
                 categories.append(cat)
         if 'continue' not in r:
             break
@@ -93,7 +96,9 @@ def get_subcategories(cat):
     for _counter in range(100): # limit pagination to 100 queries
         categorymembers = r['query']['categorymembers']
         for c in categorymembers:
-            subcat = c['title'][len('Category:'):]
+            subcat = c['title']
+            if subcat.startswith('Category:'):
+                subcat = subcat[len('Category:'):]
             subcats.append(subcat)
         if 'continue' not in r:
             break
