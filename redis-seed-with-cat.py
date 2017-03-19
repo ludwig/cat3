@@ -23,10 +23,12 @@ def main():
 
     # Add subcategories to the redis set 'foo'.
     # Choose one of these as starting points.
+
     populate_from_category(r, 'Anatomy')
     #populate_from_category(r, 'Animal anatomy')
     #populate_from_category(r, 'Organs (anatomy)')
     #populate_from_category(r, 'Thorax (human anatomy)')
+    #populate_from_category(r, 'Human anatomy')
 
 
 if __name__ == "__main__":
