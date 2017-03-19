@@ -20,8 +20,11 @@ def main():
     url = sys.argv[1]
     title = get_page_title(url)
 
-    #obj = wiki.query_categories(title)
-    obj = wiki.get_page_categories(title)
+    wiki_api = wiki.API('wikipedia')
+    #ganfyd_api = wiki.API('ganfyd')
+
+    #obj = wiki_api.query_categories(title)
+    obj = wiki_api.get_page_categories(title)
 
     json.dump(obj, sys.stdout, indent=2)
     sys.stdout.write('\n')

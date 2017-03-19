@@ -14,8 +14,11 @@ def main():
 
     category = sys.argv[1]
 
-    #obj = wiki.query_subcat(category)
-    obj = wiki.get_subcategories(category)
+    wiki_api = wiki.API('wikipedia')
+    #ganfyd_api = wiki.API('ganfyd')
+
+    #obj = wiki_api.query_category_subcat(category)
+    obj = wiki_api.get_category_subcategories(category)
 
     json.dump(obj, sys.stdout, indent=2)
     sys.stdout.write('\n')
