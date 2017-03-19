@@ -7,6 +7,8 @@ import wiki
 
 from urllib.parse import urlparse
 
+# Example: https://en.wikipedia.org/w/api.php?action=query&format=json&prop=categories&clshow=!hidden&cllimit=500&titles=Heart
+
 def get_page_title(url):
     parsed_url = urlparse(url)
     m = re.match(r'/wiki/(?P<title>.*)', parsed_url.path)
