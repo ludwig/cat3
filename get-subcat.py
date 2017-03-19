@@ -4,7 +4,7 @@ import sys
 import json
 import wiki
 
-# Example query: https://en.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtype=subcat&cmtitle=Category:Anatomy
+# Example: https://en.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtype=subcat&cmtitle=Category:Anatomy
 
 def main():
     if len(sys.argv) < 2:
