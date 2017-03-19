@@ -1,5 +1,6 @@
 --high-------------------------------------------------------------------------
-Refactor wiki.py to allow for different API backends
-Write function for returning all pages belonging to a category
 --normal-----------------------------------------------------------------------
 --low--------------------------------------------------------------------------
+--done-------------------------------------------------------------------------
+Refactor wiki.py to allow for different API backends
+Write function for returning all pages belonging to a category
